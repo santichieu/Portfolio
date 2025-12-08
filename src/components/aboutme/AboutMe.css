@@ -1,0 +1,51 @@
+.aboutmecontainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 40px 0;
+}
+
+.aboutmecontent {
+  width: 90%;
+  max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.aboutmecontent h3 {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #64FFDA; 
+}
+
+
+.aboutmetext,
+.experiences,
+.englishlevelandgrowth {
+  background: #112240;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #233554; 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #E6F1FF; 
+}
+
+@media (min-width: 768px) {
+  .aboutmecontent {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    align-items: stretch;
+  }
+
+  .aboutmecontent h3 {
+    grid-column: span 3;
+  }
+}
+  .toolsList section {
+    flex: 1;
+  }

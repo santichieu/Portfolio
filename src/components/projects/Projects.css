@@ -1,0 +1,26 @@
+.projectCard {
+    border: 3px solid black;
+    border-radius: 15px;
+    padding: 1rem;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column; /* título arriba */
+    gap: 1rem;
+}
+
+/* abajo: descripción + imagen lado a lado */
+.projectBottom {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* estilos de la imagen */
+.projectBottom img {
+    width: 220px;
+    height: 140px;
+    object-fit: contain;
+    display: block;
+    border-radius: 6px;
+}

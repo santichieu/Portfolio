@@ -1,0 +1,63 @@
+
+.toolsContainer {
+  width: 100%;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+
+.toolsContainer h3 {
+  margin-bottom: 20px;
+}
+
+
+.toolsList {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  flex-wrap: wrap;
+
+}
+
+/* Cada columna */
+.toolsList section {
+  min-width: 220px;
+
+}
+
+
+.toolsList ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+.toolsList h4 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.toolsList li {
+  padding: 8px 12px;
+  margin-bottom: 8px;
+  border: 1px solid #555;
+  border-radius: 6px;
+  font-weight: 500;
+  background: #ffffff20;
+}
+
+.toolsBox {
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 12px;
+  width: 250px;
+}
+
+@media (max-width: 700px) {
+  .toolsList {
+    flex-direction: column;
+    align-items: center;
+  }
+}
