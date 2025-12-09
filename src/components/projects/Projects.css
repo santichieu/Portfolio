@@ -1,26 +1,106 @@
+.projectContainer {
+  width: 100%;
+  padding: 60px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projectContainer h2 {
+  font-size: 2rem;
+  color: #64FFDA;
+  margin-bottom: 35px;
+}
+
+
+.cardContainer {
+  width: 90%;
+  max-width: 1400px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+  gap: 35px;
+  justify-items: center;
+}
+
+
 .projectCard {
-    border: 3px solid black;
-    border-radius: 15px;
-    padding: 1rem;
-    margin: 1rem;
-    display: flex;
-    flex-direction: column; /* título arriba */
-    gap: 1rem;
+  background: #112240;
+  padding: 20px;
+  border-radius: 14px;
+  border: 1px solid #233554;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
-/* abajo: descripción + imagen lado a lado */
+.projectCard:hover {
+  transform: translateY(-8px);
+  border-color: #64FFDA;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.45);
+}
+
+.projectCard h3 {
+  color: #64FFDA;
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+}
+
+
 .projectBottom {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
-/* estilos de la imagen */
+.projectBottom p {
+  color: #E6F1FF;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
 .projectBottom img {
-    width: 220px;
-    height: 140px;
-    object-fit: contain;
-    display: block;
-    border-radius: 6px;
+  width: 100%;
+  height: 380px;       
+  object-fit: cover;   
+  border-radius: 10px;
+  border: 1px solid #233554;
+  transition: transform 0.35s ease;
+}
+
+.projectCard:hover img {
+  transform: scale(1.05);
+}
+
+.cardLinks {
+  margin-top: 15px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.cardLink {
+  padding: 8px 14px;
+  background: #112240;
+  border: 1px solid #64ffda;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: #64ffda;
+  transition: 0.3s ease;
+}
+
+.cardLink:hover {
+  background: #64ffda;
+  color: #0a192f;
+}
+
+@media (max-width: 650px) {
+  .cardContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .projectBottom img {
+    height: 260px;
+  }
 }

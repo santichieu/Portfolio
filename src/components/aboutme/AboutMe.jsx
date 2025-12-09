@@ -2,7 +2,8 @@ import "./AboutMe.css"
 
 const AboutMe = () => {
   return (
-    <div id="aboutMe" className="aboutmecontainer">
+    <div id="aboutMe">
+    <div  className="aboutmecontainer">
       <section className="aboutmecontent">
         <h3>Sobre mí</h3>
 
@@ -22,6 +23,7 @@ const AboutMe = () => {
           Me entusiasma seguir aprendiendo y desarrollarme para construir una carrera sólida en el mundo IT.
         </div>
       </section>
+    </div>
     </div>
   );
 }

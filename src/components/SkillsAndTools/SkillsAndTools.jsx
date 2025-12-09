@@ -2,8 +2,8 @@ import "./SkillsAndTools.css"
 
 const SkillsAndTools = () => {
   return (
-   <div className="toolsContainer">
-  <h3>Herramientas</h3>
+   <div id="skills" className="toolsContainer">
+  <h3>Habilidades</h3>
   <section className="toolsList">
 
     <div className="toolsBox">
