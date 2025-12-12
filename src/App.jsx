@@ -3,6 +3,7 @@ import Home from './components/home/home'
 import NavBar from './components/navbar/NavBar'
 import Projects from './components/projects/Projects'
 import SkillsAndTools from './components/SkillsAndTools/SkillsAndTools'
+import Contact from './contact/contact'
 import './App.css'
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
       <AboutMe />
       <SkillsAndTools />
       <Projects />
+      <Contact />
     </>
   )
 }

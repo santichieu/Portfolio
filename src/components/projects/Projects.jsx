@@ -1,10 +1,20 @@
 import { projectsInfo } from "../../data/projects"
+import { useTranslate } from "../../hooks/useTranslate";
 import "./Projects.css"
 
 const Projects = () => {
+    const t = useTranslate();
   return (
     <div id="projects" className='projectContainer'>
-      <h2>Proyectos</h2>
+      <div className="header">
+          <h2>
+            <span className="spantitle">
+              {t("projects")}
+            </span>
+          </h2>
+          <div className="underline"></div>
+
+        </div>
 
       <div className='cardContainer'>
         {projectsInfo.map((project) => (
@@ -13,7 +23,7 @@ const Projects = () => {
             <h3>{project.title}</h3>
 
             <div className="projectBottom">
-              <p>{project.description}</p>
+              <p>{t(project.description)}</p>
               <img src={project.image} alt={project.title} />
             </div>
 
@@ -25,7 +35,7 @@ const Projects = () => {
                   rel="noopener noreferrer"
                   className="cardLink"
                 >
-                  <i className="bi bi-github"></i>  Ver Proyecto
+                  <i className="bi bi-github"></i>  {t("GitHub Project")}
                 </a>
               )}
               {project.projectLinkFront && (
@@ -35,7 +45,7 @@ const Projects = () => {
                   rel="noopener noreferrer"
                   className="cardLink"
                 >
-                  <i className="bi bi-code"></i> Ver Frontend
+                  <i className="bi bi-code"></i> Frontend
                 </a>
               )}
 
@@ -46,7 +56,7 @@ const Projects = () => {
                   rel="noopener noreferrer"
                   className="cardLink"
                 >
-                  <i className="bi bi-database-fill"></i> Ver Backend
+                  <i className="bi bi-database-fill"></i>Backend
                 </a>
               )}
             </div>

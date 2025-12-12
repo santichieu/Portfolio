@@ -4,13 +4,23 @@
   max-width: 1200px;
   margin: 0 auto;
 }
-
-.toolsContainer h3 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  color: #64ffda;
+.header {
   text-align: center;
 }
+
+.spantitle {
+  font-size: 2rem;
+  color: #64FFDA;
+}
+
+.underline {
+  width: 80px;
+  height: 3px;
+  background: #64FFDA;
+  margin: 8px auto 15px;
+  border-radius: 2px;
+}
+
 
 
 .toolsList {

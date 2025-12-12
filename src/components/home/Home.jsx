@@ -1,11 +1,21 @@
+import { useTranslate } from "../../hooks/useTranslate"
 import "./home.css"
 
 const Home = () => {
+  const t = useTranslate();
   return (
     <>
     <div id="home" className="homeContainer">
     <h1 className="Name">Santiago Chieu</h1>
-    <div className="Title"><h2>FullStack Developer</h2></div>
+    <div className="header">
+          <h2>
+            <span className="spantitle">
+              {t("FullStack Developer")}
+            </span>
+          </h2>
+          <div className="underline"></div>
+
+        </div>
     <ul className="social-links">
         <li>
           <a
@@ -27,7 +37,7 @@ const Home = () => {
           </a>
         </li>
       </ul>
-      <button>Descargar CV</button>
+      <button>{t("Download CV")}</button>
     
     </div>
     </>
