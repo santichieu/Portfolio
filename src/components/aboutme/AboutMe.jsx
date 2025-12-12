@@ -2,7 +2,7 @@ import { useTranslate } from "../../hooks/useTranslate";
 import "./AboutMe.css"
 
 const AboutMe = () => {
-  const t = useTranslate();
+  const {t} = useTranslate();
   return (
     <div id="aboutMe">
     <div  className="aboutmecontainer">

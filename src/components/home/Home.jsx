@@ -2,7 +2,27 @@ import { useTranslate } from "../../hooks/useTranslate"
 import "./home.css"
 
 const Home = () => {
-  const t = useTranslate();
+  const { t, language } = useTranslate();
+  
+const downloadPDF = () => {
+  const isSpanish = language === "es";
+
+  const link = document.createElement("a");
+
+  link.href = isSpanish
+    ? "/Santiago Chieu Desarrollador FullStack.pdf"
+    : "/Santiago Chieu FullStack Developer english.pdf";
+
+  link.download = isSpanish
+    ? "Santiago Chieu Desarrollador FullStack.pdf"
+    : "Santiago Chieu FullStack Developer english.pdf";
+
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
+
+
   return (
     <>
     <div id="home" className="homeContainer">
@@ -37,7 +57,7 @@ const Home = () => {
           </a>
         </li>
       </ul>
-      <button>{t("Download CV")}</button>
+      <button onClick={downloadPDF}>{t("Download CV")}</button>
     
     </div>
     </>

@@ -5,7 +5,7 @@ import { useTranslate } from "../hooks/useTranslate";
 
 const Contact = () => {
   
-  const t = useTranslate();
+  const {t} = useTranslate();
 
   emailjs.init("ZwxD5CnHQjr33aUV4");
 

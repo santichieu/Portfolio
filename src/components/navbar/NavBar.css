@@ -1,9 +1,10 @@
+/* ===== NAVBAR ===== */
 .navbar {
   width: 100%;
   background-color: rgba(23, 42, 69, 0.9);
   backdrop-filter: blur(10px);
   padding: 0 2em;
-height: 4em;
+  height: 4em;
   position: fixed;
   top: 0;
   left: 0;
@@ -13,11 +14,11 @@ height: 4em;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
 }
 
-
+/* ===== CONTAINER ===== */
 .navContainer {
   height: 100%;
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
   align-items: center;
   width: 100%;
 }
@@ -29,8 +30,7 @@ height: 4em;
   color: #64FFDA;
 }
 
-
-/* ===== LINKS (DESKTOP) ===== */
+/* ===== LINKS DESKTOP ===== */
 .navLinks {
   display: flex;
   gap: 3em;
@@ -64,22 +64,33 @@ height: 4em;
   width: 100%;
 }
 
-
-/* ===== BOTÓN CAMBIO DE IDIOMA ===== */
-.language-toggle {
-  align-self: center;      /* <-- ESTO LO CENTRA DE VERDAD */
+/* ===== CONTROLS (LANG + BURGER) ===== */
+.controls {
   display: flex;
-  justify-content: center;
   align-items: center;
-  height: 2.2em;           /* <-- MISMA ALTURA VISUAL */
-  padding: 0 0.8em;        /* <-- NO vertical */
+  gap: 0.6rem;
+}
+
+/* ===== BOTÓN CAMBIO IDIOMA ===== */
+.language-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.2em;
+  padding: 0 0.8em;
+  border-radius: 8px;
+  background: #64FFDA;
+  color: #002b36;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s ease;
 }
 
 .language-toggle:hover {
   transform: scale(1.05);
   background-color: #72ffe0;
 }
-
 
 /* ===== HAMBURGER ===== */
 .hamburger {
@@ -111,17 +122,11 @@ height: 4em;
   transform: translateY(-9px) rotate(-45deg);
 }
 
-
-/* ===== RESPONSIVE ===== */
+/* ===== MOBILE ===== */
 @media (max-width: 768px) {
+
   .hamburger {
     display: flex;
-  }
-
-  /* BOTÓN DE IDIOMA MOBILE */
-  .language-toggle {
-    margin-left: 0; 
-    margin-right: 1em;
   }
 
   .navLinks {
@@ -130,18 +135,15 @@ height: 4em;
     left: 50%;
     transform: translateX(-50%);
     line-height: 2.2em;
-    width: 90%; 
+    width: 90%;
     max-width: 300px;
-
     background-color: rgba(17, 34, 64, 0.95);
     backdrop-filter: blur(10px);
     border-radius: 0.5em;
     border: 1px solid rgba(255, 255, 255, 0.08);
-
     flex-direction: column;
     gap: 1.5em;
     padding: 1.5em 0;
-
     display: none;
     animation: slideIn 0.3s ease-out;
   }
@@ -149,8 +151,19 @@ height: 4em;
   .navLinks.open {
     display: flex;
   }
+
+  /* Orden correcto */
+  .logo { order: 1; }
+  .controls { order: 2; }
+  .navLinks { order: 3; }
+
+  /* Mantener controles a la derecha */
+  .controls {
+    margin-left: auto;
+  }
 }
 
+/* Animación menú mobile */
 @keyframes slideIn {
   from {
     opacity: 0;
