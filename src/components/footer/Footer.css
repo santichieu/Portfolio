@@ -1,0 +1,21 @@
+.footer {
+  width: 100%;
+  background-color: rgba(23, 42, 69, 0.9);
+  backdrop-filter: blur(10px);
+  padding: 1em 2em;
+  height: auto;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  color: #E6F1FF;
+  font-size: 1rem;
+}
+
+.footer i {
+    padding: 0 0.2rem;
+}

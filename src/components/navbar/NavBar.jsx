@@ -1,15 +1,33 @@
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect, useRef } from "react";
 import "./NavBar.css";
 import { useTranslate } from "../../hooks/useTranslate";
 import { TranslateContext } from "../../contexts/Translate.context";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const [isHidden, setIsHidden] = useState(false);
   const { language, handleChangeLanguage } = useContext(TranslateContext);
+  const lastScrollPos = useRef(0);
   const { t } = useTranslate();
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollpos = window.scrollY;
+      if (currentScrollpos > lastScrollPos.current) {
+        setIsHidden(true);
+      } else {
+        setIsHidden(false);
+      }
+      lastScrollPos.current = currentScrollpos;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${isHidden ? "hide" : "show"}`}>
       <div className="navContainer">
 
         <div className="logo">
