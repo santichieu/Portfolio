@@ -1,5 +1,5 @@
 import { useTranslate } from "../../hooks/useTranslate"
-import "./home.css"
+import "./Home.css"
 
 const Home = () => {
   const { t, language } = useTranslate();
