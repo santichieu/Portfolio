@@ -52,6 +52,7 @@ const SkillsAndTools = () => {
               <li>Kanban</li>
               <li>Jira</li>
               <li>Scrum</li>
+              <li>Azure</li>
             </ul>
           </div>
 
