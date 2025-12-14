@@ -84,7 +84,7 @@
 .textareaicon {
   position: absolute;
   left: 14px;
-  top: 18px;
+  top: 12px;
   color: #64FFDA;
   font-size: 1.2rem;
 }
@@ -108,7 +108,7 @@
 
 .forminput,
 .formtextarea,
-.form-input { /* fallback por si mezclaste clases */
+.form-input {
   width: 100%;
   padding: 12px 12px 12px 40px;
   background: #0A192F;

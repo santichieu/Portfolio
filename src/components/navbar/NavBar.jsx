@@ -12,21 +12,18 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navContainer">
 
-        {/* LOGO */}
         <div className="logo">
-          <i className="bi bi-terminal"></i>
+          <a href="#home"><i className="bi bi-terminal"></i></a>
         </div>
 
-        {/* LINKS */}
         <ul className={`navLinks ${open ? "open" : ""}`}>
           <li><a href="#home">{t("Home")}</a></li>
           <li><a href="#aboutMe">{t("About Me")}</a></li>
-          <li><a href="#projects">{t("Projects")}</a></li>
           <li><a href="#skills">{t("Skills")}</a></li>
+          <li><a href="#projects">{t("Projects")}</a></li>
           <li><a href="#contact">{t("Contact")}</a></li>
         </ul>
 
-        {/* CONTROLES: IDIOMA + HAMBURGER */}
         <div className="controls">
           <button
             className="language-toggle"

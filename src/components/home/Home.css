@@ -27,8 +27,8 @@
   color: #64FFDA;
 }
 
-.underline {
-  width: 80px;
+.underlinetitle {
+  width: 130px;
   height: 3px;
   background: #64FFDA;
   margin: 8px auto 15px;
@@ -51,7 +51,7 @@
   color: #64FFDA;
 }
 
-button {
+.downloadbutton {
   margin-top: 1.8rem;
   padding: 12px 24px;
   background-color: #64FFDA;

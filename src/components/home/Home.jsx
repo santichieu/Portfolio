@@ -25,7 +25,7 @@ const downloadPDF = () => {
 
   return (
     <>
-    <div id="home" className="homeContainer">
+    <section id="home" className="homeContainer">
     <h1 className="Name">Santiago Chieu</h1>
     <div className="header">
           <h2>
@@ -33,7 +33,7 @@ const downloadPDF = () => {
               {t("FullStack Developer")}
             </span>
           </h2>
-          <div className="underline"></div>
+          <div className="underlinetitle"></div>
 
         </div>
     <ul className="social-links">
@@ -57,9 +57,10 @@ const downloadPDF = () => {
           </a>
         </li>
       </ul>
-      <button onClick={downloadPDF}>{t("Download CV")}</button>
+  
+      <button className="downloadbutton" onClick={downloadPDF}>{t("Download CV")}</button>
     
-    </div>
+    </section>
     </>
   )
 }

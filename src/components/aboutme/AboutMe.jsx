@@ -4,9 +4,9 @@ import "./AboutMe.css"
 const AboutMe = () => {
   const {t} = useTranslate();
   return (
-    <div id="aboutMe">
+    <section id="aboutMe">
     <div  className="aboutmecontainer">
-      <section className="aboutmecontent">
+      <div className="aboutmecontent">
           <h3 className="header">
             <span className="spantitle">
               {t("About Me")}
@@ -24,9 +24,9 @@ const AboutMe = () => {
         <div className="englishlevelandgrowth">
           {t("englishlevelandgrowth")}
         </div>
-      </section>
+      </div>
     </div>
-    </div>
+    </section>
   );
 }
 

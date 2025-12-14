@@ -5,7 +5,7 @@ import "./Projects.css"
 const Projects = () => {
     const {t} = useTranslate();
   return (
-    <div id="projects" className='projectContainer'>
+    <section id="projects" className='projectContainer'>
       <div className="header">
           <h2>
             <span className="spantitle">
@@ -64,7 +64,7 @@ const Projects = () => {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   )
 }
 
