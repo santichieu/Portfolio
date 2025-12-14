@@ -1,7 +1,7 @@
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import "./Contact.css";
-import { useTranslate } from "../hooks/useTranslate";
+import { useTranslate } from "../../hooks/useTranslate";
 
 const Contact = () => {
   

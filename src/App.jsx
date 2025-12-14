@@ -1,9 +1,10 @@
 import AboutMe from './components/aboutme/AboutMe'
-import Home from './components/home/home'
+import Home from './components/home/Home'
 import NavBar from './components/navbar/NavBar'
 import Projects from './components/projects/Projects'
 import SkillsAndTools from './components/SkillsAndTools/SkillsAndTools'
-import Contact from './contact/contact'
+import Contact from './components/contact/Contact'
+
 import './App.css'
 function App() {
 
@@ -15,7 +16,7 @@ function App() {
       <AboutMe />
       <SkillsAndTools />
       <Projects />
-      <Contact />
+      <Contact/>
     </>
   )
 }
