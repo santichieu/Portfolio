@@ -20,8 +20,8 @@ export const translation_dictionary = {
     { key: "contactdescription", value: "Su consulta no es molestia" },
     { key: "Name", value: "Nombre" },
     { key: "Subject", value: "Asunto" },
-    { key: "YourEmail", value: "Tu Correo electrónico" },
-    { key: "YourMessage", value: "Tu Mensaje" },
+    { key: "Your Email", value: "Tu Correo electrónico" },
+    { key: "Your Message", value: "Tu Mensaje" },
     { key: "Send", value: "Enviar" },
     { key: "messagesent", value: "¡Mensaje enviado! Me pondré en contacto contigo pronto." },
     { key: "senderror", value: "Error al enviar el mensaje. Por favor, inténtalo de nuevo más tarde." },
@@ -32,7 +32,7 @@ export const translation_dictionary = {
     { key: "socialmedia", value: "Redes Sociales" },
     { key: "GitHub Project", value: "Proyecto GitHub" },
     { key: "skills&methodologies", value: "Habilidades y Metodologías" },
-    {key:"Sending", value:"Enviando..." }
+    { key: "Sending", value: "Enviando..." }
   ],
   en: [
     { key: "Home", value: "Home" },
@@ -67,6 +67,6 @@ export const translation_dictionary = {
     { key: "socialmedia", value: "Social Media" },
     { key: "GitHub Project", value: "GitHub Project" },
     { key: "skills&methodologies", value: "Skills & Methodologies" },
-     {key:"Sending", value:"Sending..." }
+    { key: "Sending", value: "Sending..." }
   ],
 };
