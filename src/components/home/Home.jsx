@@ -4,15 +4,26 @@ import "./Home.css"
 const Home = () => {
   const { t, language } = useTranslate();
 
-const openPDF = () => {
+const downloadPDF = () => {
 
     const fileName = language === "en" 
       ? "CV_English.pdf" 
       : "CV.pdf"; 
 
-      const a = document.createElement("a");
-      a.href
+    const fileUrl = `${fileName}`;
 
+    console.log("Ruta generada:", fileUrl);
+
+    const link = document.createElement("a");
+    link.href = fileUrl;
+
+    link.download = language === "en" 
+      ? "Santiago_Chieu_CV_English.pdf" 
+      : "Santiago_Chieu_CV_Espanol.pdf";
+    
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -49,11 +60,12 @@ const openPDF = () => {
             </a>
           </li>
         </ul>
-  
-        <button className="downloadbutton" onClick={() => window.open(`${language === "en" ? "CV_English.pdf" : "CV.pdf"}`,
-      "_blank")}>
-          {t("open CV")}
+        <div>
+        <button className="downloadbutton" onClick={downloadPDF}>
+          {t("Download CV")}
         </button>
+        <button className="openbutton" onClick={() => window.open(`${language === "en" ? "CV_English.pdf" : "CV.pdf"}`, "_blank")}>{t("open CV")}</button>
+        </div>
       </section>
     </>
   )
